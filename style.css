@@ -1,0 +1,74 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 580px;
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+}
+
+.progress-bar {
+	display: flex;
+	justify-content: center;
+}
+
+.progress-container__circle-one {
+	stroke: #bbb;
+	stroke-width: 8;
+}
+
+.progress-container__circle-two {
+  fill: none;
+	background: black;
+  stroke: orange;
+  stroke-width: 8;
+  transform-origin: center;
+  transform: rotate(-90deg);
+/* 	animation: preloader 2.5s infinite linear; */
+}
+
+.progress-control {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.progress-control__value {
+	border: 1px solid black;
+	width: 22%;
+	border-radius: 20px;
+	padding: 4px 0px;
+	font-size: 16px;
+	outline: none;
+	text-align: center;
+}
+
+.progress-control button {
+	margin-top: 10px;
+	width: 60px;
+}
+
+
+@keyframes preloader {
+	from {
+		transform: rotate(0deg);
+	}
+	
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+@media (max-width: 320px) {
+	.wrapper {
+		flex-direction: column;
+	}
+}
+
+
